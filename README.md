@@ -2,22 +2,23 @@
 ![Кабель питания](https://raw.githubusercontent.com/diaskabdualiev/RaspberryPi-Kit/main/cable-power.png)
 
 <img src="https://github.com/diaskabdualiev/RaspberryPi-Kit/blob/main/6aebb638-e088-4b28-bbfd-67eae784ca3b_PI_5_FEATURE.png" alt="PI 5 FEATURE" width="500" height="300">
+
 - **Raspberry Pi 5** (4GB/8GB)
 - **Блок питания**
-    - **Мощность**: 5В / 5A 27W
-    - **Разъем**: с поддержкой технологий Power Delivery
-    - [Ссылка на официальный блок питания](https://www.raspberrypi.com/products/27w-power-supply/)
+  - **Мощность:** 5В / 5A 27W
+  - **Разъем:** с поддержкой технологий Power Delivery  
+  - [Ссылка на официальный блок питания](https://www.raspberrypi.com/products/27w-power-supply/)
 - **Кабели и переходники**
-    - HDMI-кабель или micro-HDMI
-    - SD кард-ридер
-    - Ethernet-кабель
+  - HDMI-кабель или micro-HDMI
+  - SD кард-ридер
+  - Ethernet-кабель
 - **Накопители**
-    - Карта microSD 32/64ГБ
+  - Карта microSD 32/64ГБ
 - **Корпус и система охлаждения**
-    - Корпус *(пока непонятно)*
-    - Радиатор с вентилятором
+  - Корпус *(пока непонятно)*
+  - Радиатор с вентилятором
 - **Внешние устройства ввода**
-    - Клавиатура и мышь *(пока непонятно)*
+  - Клавиатура и мышь *(пока непонятно)*
 
 
 1. **Светодиоды (5 штук)**
