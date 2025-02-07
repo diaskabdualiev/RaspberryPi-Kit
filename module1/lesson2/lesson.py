@@ -1,32 +1,23 @@
-import RPi.GPIO as GPIO
-import time
+from gpiozero import LED, Button  # Импортируем классы LED и Button
+from signal import pause
 
-# Use BCM pin numbering
-GPIO.setmode(GPIO.BCM)
+led = LED(18)  # Определяем светодиод на GPIO17
+button = Button(23)  # Определяем кнопку на GPIO2
 
-# Set pin 18 (BCM) as an output for the LED
-GPIO.setup(18, GPIO.OUT)
+# Функция, которая включит светодиод, когда нажмем кнопку
+def led_on():
+    print("Кнопка нажата! Включаем LED.")
+    led.on()
 
-# Set pin 23 (BCM) as an input for the button, with a pull-down resistor
-GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+# Функция, которая выключит светодиод, когда отпустим кнопку
+def led_off():
+    print("Кнопка отпущена! Выключаем LED.")
+    led.off()
 
-try:
-    while True:
-        # Check if the button is pressed
-        if GPIO.input(23) == GPIO.HIGH:
-            # If the button is pressed, turn the LED on
-            GPIO.output(18, GPIO.HIGH)
-            print("Button is pressed, LED is ON")
-        else:
-            # Otherwise, turn the LED off
-            GPIO.output(18, GPIO.LOW)
-            print("Button is not pressed, LED is OFF")
-        
-        # Delay to prevent busy waiting
-        time.sleep(0.1)
+# Назначаем обработчики событий
+button.when_pressed = led_on  # Когда кнопку нажали, включаем LED
+button.when_released = led_off  # Когда кнопку отпустили, выключаем LED
 
-except KeyboardInterrupt:
-    # Catch the Ctrl+C keyboard interrupt and cleanup
-    GPIO.cleanup()
-    print("Program interrupted and GPIO cleaned up.")
-
+# Бесконечный цикл ожидания, чтобы программа не завершалась
+print("Нажми кнопку, чтобы включить светодиод!")
+pause()
